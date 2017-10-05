@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<!-- CSS Link -->
 	<link rel="stylesheet" href="style.css">
+	<!-- Google Fonts Link -->
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:600|Open+Sans" rel="stylesheet">
 	<!-- Firebase Link -->
 	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
 
@@ -21,47 +23,50 @@
 </head>
 <body>
 
-<div class="my-5 card mx-auto text-center">
-	<table id="info-table" class="table">
-		<tr>
-			<th>Train Name</th>
-			<th>Destination</th>
-			<th>Frequency (min.)</th>
-			<th>Next Arrival</th>
-			<th>Minutes Away</th>
-		</tr>
-		<tr>
-			<th scope="row"></th>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
-</div> 
+	<div class="my-5 card mx-auto text-center train-table">
+		<table id="info-table" class="table">
+			<h1>Island of Sodor Train Schedule</h1>
+			<tr>
+				<th class="table-header">Train Name</th>
+				<th class="table-header">Destination</th>
+				<th class="table-header">Frequency (min.)</th>
+				<th class="table-header">Next Arrival</th>
+				<th class="table-header">Minutes Away</th>
+			</tr>
+			<tr>
+				<th scope="row"></th>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div> 
 
-<div class="my-5 card mx-auto">
-	<form class="ml-1" id="formID">
-		<div class="form-group">
-			<label for="train-input">Train Name</label>
-			<input type="text" class="form-control" id="train-input">
-		</div>
-		<div class="form-group">
-			<label for="destination-input">Destination</label>
-			<input type="text" class="form-control" id="destination-input">
-		</div>
-		<div class="form-group">
-			<label for="first-train-time">First Train Time (hh:mm - military time)</label>
-			<input type="text"  class="form-control" id="time-input">
-		</div>
-		<div class="form-group">
-			<label for="frequency-input">Frequency</label>
-			<input type="number" class="form-control" id="frequency-input">
-		</div>
-	 	<button id="submit-btn" type="submit" class="btn btn-primary">Submit</button>
-
-	</form>
-</div>
-<!-- JQuery Script -->
+	<div class="my-5 card mx-auto train-form">
+		<form class="ml-1" id="formID">
+			<div class="form-group">
+				<label for="train-input" class="label-text">Train Name</label>
+				<input type="text" class="form-control" id="train-input">
+			</div>
+			<div class="form-group">
+				<label for="destination-input" class="label-text">Destination</label>
+				<input type="text" class="form-control" id="destination-input">
+			</div>
+			<div class="form-group">
+				<label for="first-train-time" class="label-text">First Train Time (hh:mm - military time)</label>
+				<input type="text"  class="form-control" id="time-input">
+			</div>
+			<div class="form-group">
+				<label for="frequency-input" class="label-text">Frequency</label>
+				<input type="number" class="form-control" id="frequency-input">
+			</div>
+			<div style="text-align: center;">
+				<button id="submit-btn" type="submit" class="btn btn-primary btn-lg">Submit</button>
+			</div>
+			<audio id="whistle" src="assets/train-whistle.mp3"></audio>
+		</form>
+	</div>
+	<!-- JQuery Script -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<!-- Javascript Link -->

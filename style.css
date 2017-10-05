@@ -1,3 +1,45 @@
-body{
-  width:80%;
+body {
+	width:80%;
+	background: #778899;
+}
+
+.train-table, .train-form {
+	position:relative;
+	left:120px;
+}
+
+h1 {
+	font-family: 'Encode Sans Expanded', sans-serif;
+	font-weight: 600;
+	padding-top: 10px;
+}
+
+.table-header {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+}
+
+
+.table-row-data {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+.ml-1 {
+	padding-left: 5px;
+	padding-right: 10px;
+}
+
+.label-text {
+	font-family: 'Encode Sans Expanded', sans-serif;
+	padding-top: 10px;
+}
+
+#submit-btn {
+	margin-bottom: 10px;
+	
+}
+
+tr:hover {
+	background-color: #ffff99;
 }
